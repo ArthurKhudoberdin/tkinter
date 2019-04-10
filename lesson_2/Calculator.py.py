@@ -20,19 +20,17 @@ def sqrt():
         ent.insert(0, f)
 def factorial():
     s = ent.get()
-    try:
-        s = int(s)
-        f = 1
-        for i in range(1, s+1):
-            f *= i
-        clear()
-        ent.insert(0, f)
+    s = int(s)
+    f = 1
+    for i in range(1, s+1):
+     f *= i
+      clear()
+      ent.insert(0, f)
 def equal():
     s = ent.get()
-    try:
-        result = eval(s)
-        clear()
-        ent.insert(0, result)
+    result = eval(s)
+    clear()
+    ent.insert(0, result)
 btn_01 = Button(root, text = 'n!', width = 3, height = 1, command = factorial)
 btn_01.grid(row = 2, column = 0, padx = 5, pady = 5)
 btn_ce = Button(root, text = 'CE', width = 3, height = 1, command = clear)
